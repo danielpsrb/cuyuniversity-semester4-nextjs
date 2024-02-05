@@ -1,6 +1,5 @@
 "use client"
 
-import { useRouter } from "next/navigation";
 import { useState } from "react"
 import Swal from "sweetalert2"
 import { toast, ToastContainer } from 'react-toastify';
@@ -13,8 +12,6 @@ const CommentInput = ({ anime_mal_id, user_email, username, anime_title }) => {
 
     const [comment, setComment] = useState("")
     const [isCreated, setIsCreated] = useState(false)
-
-    const router = useRouter();
 
     const [rating, setRating] = useState(0);
     const [selectedEmoji, setSelectedEmoji] = useState('');
@@ -85,7 +82,6 @@ const CommentInput = ({ anime_mal_id, user_email, username, anime_title }) => {
             setComment("")
             setRating(0); // Reset rating setelah dikirim
             setSelectedEmoji(''); 
-            router.refresh();
         }
         return
     }
