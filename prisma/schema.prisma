@@ -1,0 +1,52 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  image     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Add a comments field to establish the relation
+  comments   Comment[]
+}
+
+model Collection {
+  id              Int @id @default(autoincrement())
+  anime_mal_id    String
+  user_email      String
+  anime_image     String?
+  anime_title     String?
+  createdAt       DateTime @default(now())
+
+  @@unique([user_email, anime_mal_id])
+}
+
+model Comment {
+  id              Int     @id @default(autoincrement())
+  anime_mal_id    String
+  comment         String
+  username        String   
+  anime_title     String   
+  rating          Float
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  date            DateTime   
+
+  // Reference the user by email
+  userEmail       String
+
+  // Define the relation with the User model
+  user            User     @relation(fields: [userEmail], references: [email])
+}
