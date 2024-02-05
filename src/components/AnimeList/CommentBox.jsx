@@ -22,11 +22,16 @@ const CommentBox = ({ anime_mal_id }) => {
     const apiUrl = `/api/v1/comment?anime_mal_id=${anime_mal_id}`;
 
     // Gunakan useSWR untuk mendapatkan data secara real-time
-    const { data: comments, error } = useSWR(apiUrl, fetcher);
+    const { data: comments, error, isLoading } = useSWR(apiUrl, fetcher, {
+        revalidateOnFocus: false,
+        refreshInterval: 2000 
+    });
 
     if (error) {
         console.error('Error fetching comments:', error);
     }
+
+    if (isLoading) return <div>loading...</div>
 
     return (
         <div className='grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
