@@ -35,4 +35,16 @@ img:hover {
     100%{transform: rotate(1turn)}
     }
 
-    
+.editComment {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    resize: none; 
+    overflow: hidden;
+}    
+
+/* Styling for Welcome component */
+.text-right {
+    text-align: right;
+    margin-right: 20px; /* or any other value that suits your design */
+}

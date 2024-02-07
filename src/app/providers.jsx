@@ -2,12 +2,13 @@
 
 import * as React from "react";
 
-import { NextUIProvider } from "@nextui-org/system";
+import { ChakraProvider } from '@chakra-ui/react'
+
 
 export default function Providers({ children }) {
     return (
-        <NextUIProvider>
+        <ChakraProvider>
         {children}
-        </NextUIProvider>
+        </ChakraProvider>
     )
 }

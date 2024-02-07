@@ -6,6 +6,7 @@ import { faComment } from "@fortawesome/free-solid-svg-icons";
 import CollectionsIcon from '@mui/icons-material/Collections';
 import Header from "@/components/Dashboard/Header";
 import { saveUserData } from "../saveUsers/page";
+import Welcome from "@/components/Dashboard/Welcome";
 
 const Page = async () => {
     const user = await authUserSession()
@@ -22,7 +23,7 @@ const Page = async () => {
             <div className="w-full px-2"><Header /></div>
             <div className="mx-auto p-2">
             <div className="border-2 border-color-deepskyblue bg-color-black p-2 rounded-xl shadow-xl text-center sm:text-left">
-                <h5 className="text-xl font-bold select-none mb-2 sm:inline mr-2">Hello {user?.name}</h5>
+                <h5 className="text-xl font-bold select-none mb-2 sm:inline mr-2">Hello {user?.name},</h5>
                 <p className="text-xl font-semibold inline select-none">Welcome to this Website 👋</p>
             </div>
         </div>

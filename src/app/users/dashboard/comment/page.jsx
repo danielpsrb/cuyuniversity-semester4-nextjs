@@ -18,7 +18,7 @@ const page = async () => {
                         <Link
                             href={`/anime/${comment.anime_mal_id}`}
                             key={comment.id}
-                            className='border-2 border-color-red bg-color-medium text-color-lavender p-4 rounded-lg shadow-xl text-nowrap'
+                            className='border-2 border-color-lime bg-color-medium text-color-lavender p-4 rounded-lg shadow-xl text-nowrap'
                         >
                             <div>
                                 <p className='text-sm font-semibold mb-2'>{comment.anime_title}</p>

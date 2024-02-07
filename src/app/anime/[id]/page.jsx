@@ -78,8 +78,8 @@ const Page = async ({ params: { id } }) => {
                 <div className="text-color-primary text-2xl mb-4 w-56 border-2 border-color-aqua bg-color-black rounded-md text-nowrap p-1 mx-auto">
                     <h3 className="select-none text-center">Komentar Penonton</h3>
                 </div>
-                <CommentBox anime_mal_id={id} user_email={user?.email} />
-                { user && <CommentInput anime_mal_id={id} user_email={user?.email} username={user?.name} anime_title={anime.data.title_english}/> }
+                <CommentBox anime_mal_id={id} user_email={user?.email} suppressHydrationWarning />
+                { user && <CommentInput anime_mal_id={id} user_email={user?.email} username={user?.name} anime_title={anime.data.title_english} /> }
             </div>
             <div>
                 <VideoPlayer youtubeId={anime.data.trailer.youtube_id}/>
