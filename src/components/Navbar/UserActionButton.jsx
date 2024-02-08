@@ -3,9 +3,9 @@ import { authUserSession } from "@/libs/auth-libs";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRightToBracket, faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import { faHome } from '@fortawesome/free-solid-svg-icons';
-import Image from "next/image";
 import { Button } from "@mui/material";
-import { MdDashboard } from "react-icons/md";
+import { MdSpaceDashboard } from "react-icons/md";
+
 
 
 // UserActionButton Component
@@ -30,7 +30,7 @@ const user = await authUserSession();
                     <Link href="/users/dashboard">
                         <Button className="relative inline-flex items-center ml-4 md:ml-5 duration-300 ease-linear text-color-black font-bold hover:bg-color-darkgray rounded-xl hover:text-color-black active:bg-color-lime">
                             <span className="ml-2">
-                                <MdDashboard className="w-5 h-5 mr-2" />
+                                <MdSpaceDashboard className="w-5 h-5 mr-2" />
                             </span>
                             <span className="text-md">Dashboard</span>
                         </Button>
