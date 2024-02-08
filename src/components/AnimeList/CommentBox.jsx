@@ -55,7 +55,7 @@ const CommentBox = ({ anime_mal_id }) => {
 
     if (error) return <div>Error fetching comments: {error.message}</div>;
 
-    if (isLoading || isLoadingUser) return <div className='text-color-primary'>Loading Comment Data...</div>;
+    if (isLoading || isLoadingUser) return <div className='text-color-primary loading-comment'></div>;
 
     const handleDeleteClick = async (id) => {
         try {

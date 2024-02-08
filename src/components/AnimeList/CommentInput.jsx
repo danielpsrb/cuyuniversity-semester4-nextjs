@@ -95,7 +95,7 @@ const CommentInput = ({ anime_mal_id, user_email, username, anime_title }) => {
                 <ReactStars
                     count={5}
                     size={30}
-                    value={rating}
+                    value={parseFloat(rating)}
                     onChange={ratingChanged}
                     color2="#ffd700"
                 />

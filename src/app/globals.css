@@ -35,6 +35,33 @@ img:hover {
     100%{transform: rotate(1turn)}
     }
 
+    .custom-loader {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 16px solid #0000;
+        border-right-color: #766DF497;
+        position: relative;
+        animation: s4 1s infinite linear;
+      }
+      .custom-loader:before,
+      .custom-loader:after {
+        content: "";
+        position: absolute;
+        inset:-16px;
+        border-radius: 50%;
+        border:inherit;
+        animation:inherit;
+        animation-duration: 2s;
+      }
+      .custom-loader:after {
+        animation-duration: 4s;
+      }
+      
+      @keyframes s4 {
+        100% {transform: rotate(1turn)}
+      }
+
 .editComment {
     width: 100%;
     padding: 8px;
@@ -43,8 +70,12 @@ img:hover {
     overflow: hidden;
 }    
 
-/* Styling for Welcome component */
-.text-right {
-    text-align: right;
-    margin-right: 20px; /* or any other value that suits your design */
-}
+.loading-comment {
+    width:50px;
+    height:12px;
+    background: radial-gradient(circle closest-side,#766DF4 90%,#0000) 0 0/33% 100% space;
+    clip-path: inset(0 100% 0 0);
+    animation:d1 1s steps(4) infinite;
+    }
+    
+    @keyframes d1 {to{clip-path: inset(0 -34% 0 0)}}
