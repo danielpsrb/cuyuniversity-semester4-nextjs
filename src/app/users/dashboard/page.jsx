@@ -10,13 +10,13 @@ import Welcome from "@/components/Dashboard/Welcome";
 
 const Page = async () => {
     const user = await authUserSession()
-    if(user) {
-        await saveUserData({
-            name: user.name,
-            email: user.email,
-            image: user.image,
-        })
-    }
+    // if(user) {
+    //     await saveUserData({
+    //         name: user.name,
+    //         email: user.email,
+    //         image: user.image,
+    //     })
+    // }
     
     return (
         <div className="flex flex-col justify-center items-center text-color-primary mt-1">
