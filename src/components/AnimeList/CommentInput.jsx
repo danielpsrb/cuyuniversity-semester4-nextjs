@@ -13,7 +13,7 @@ const CommentInput = ({ anime_mal_id, user_email, username, anime_title }) => {
     const [comment, setComment] = useState("");
     const [isCreated, setIsCreated] = useState(false);
 
-    const [rating, setRating] = useState('');
+    const [rating, setRating] = useState(0);
     const [selectedEmoji, setSelectedEmoji] = useState('');
 
     const ratingChanged = (newRating) => {
@@ -95,7 +95,7 @@ const CommentInput = ({ anime_mal_id, user_email, username, anime_title }) => {
                 <ReactStars
                     count={5}
                     size={30}
-                    value={parseFloat(rating)}
+                    value={rating}
                     onChange={ratingChanged}
                     color2="#ffd700"
                 />
