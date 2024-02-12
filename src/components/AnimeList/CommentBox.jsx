@@ -11,6 +11,8 @@ import { authUserSession } from '@/libs/auth-libs';
 import Modal from './ModalEditComment';
 import StarRating from './StarRating';
 import Swal from 'sweetalert2';
+import { formatDistanceToNow } from 'date-fns';
+
 
 const fetcher = async (url) => {
     const response = await fetch(url);
@@ -125,7 +127,7 @@ const CommentBox = ({ anime_mal_id }) => {
                         </div>
                         <div className='mb-2'>
                             <p className='text-color-lavender text-sm'>
-                                {format(new Date(comment.date), 'HH:mm, EEEE, MMMM d, yyyy')}
+                                {formatDistanceToNow(new Date(comment.date), { addSuffix: true })}
                             </p>
                         </div>
                         <div className='flex flex-row justify-between items-center mb-3'>
