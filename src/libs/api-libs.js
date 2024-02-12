@@ -1,7 +1,14 @@
-export const getAnimeResponse = async(resource, query) => {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/${resource}?${query}`)
-    const anime = await response.json()
-    return anime
+export const getAnimeResponse = async (resource, query) => {
+    try {
+        const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/${resource}?${query}`
+        )
+        const anime = await response.json()
+        return anime
+    } catch (error) {
+        console.error(error)
+        throw new Error("Failed to fetch Anime")
+    }
 }
 
 export const getNestedAnimeResponse = async(resource, objectProperty) => {
