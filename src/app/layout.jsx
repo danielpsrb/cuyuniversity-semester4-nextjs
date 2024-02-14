@@ -6,7 +6,7 @@ const gabarito = Gabarito({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'D-Animelist',
-  description: 'Website Anime Indonesia',
+  description: 'Website Anime Indonesia with NEXT JS 14',
   icons:{
     icon:['/favicon.ico?v=4'],
     apple:['/apple-touch-icon.png?v=4'],
