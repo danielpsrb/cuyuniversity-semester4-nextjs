@@ -17,17 +17,12 @@ const Page = async ({ params: { id } }) => {
         where: { user_email: user?.email, anime_mal_id: id }
     })
 
+    
     const account = await prisma.user.findUnique({
         where: {
-            email: user?.email
+            email: user.email
         }
     })
-
-    const comments = await prisma.comment.findMany({
-        where: { anime_mal_id: id },
-        select: {id: true},
-    })
-    // console.log(comments)
 
     return (
         <>
