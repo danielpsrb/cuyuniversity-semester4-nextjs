@@ -5,7 +5,7 @@ import { Gabarito } from 'next/font/google'
 const gabarito = Gabarito({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Dans Animelist',
+  title: 'D-Animelist',
   description: 'Website Anime Indonesia',
   icons:{
     icon:['/favicon.ico?v=4'],
