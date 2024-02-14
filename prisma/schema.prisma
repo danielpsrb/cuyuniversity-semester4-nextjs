@@ -34,19 +34,18 @@ model Collection {
 }
 
 model Comment {
-  id              Int     @id @default(autoincrement())
+  id              String     @id @default(uuid())
   anime_mal_id    String
+  user_email      String 
   comment         String
-  username        String   
+  username        String  
+  userId          String  
   anime_title     String   
   rating          Float
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
   date            DateTime   
 
-  // Reference the user by email
-  userEmail       String
-
   // Define the relation with the User model
-  user            User     @relation(fields: [userEmail], references: [email])
+  user            User     @relation(fields: [userId], references: [id] , onDelete: Cascade)
 }

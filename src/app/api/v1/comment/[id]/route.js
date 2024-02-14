@@ -5,7 +5,7 @@ export async function PATCH(request, { params }) {
     const body = await request.json();
     const updatedComment = await prisma.comment.update({
         where: {
-        id: Number(params.id)
+        id: String(params.id)
         },
         data: {
             comment: body.comment,
@@ -19,7 +19,7 @@ export async function PATCH(request, { params }) {
 export async function DELETE(request, { params }) {
     const deletedComment = await prisma.comment.delete({
         where: {
-        id: Number(params.id)
+        id: String(params.id)
         }
     })
     if (!deletedComment) return NextResponse.json({ status: 500, message: 'Comment does not exist'})

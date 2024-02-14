@@ -8,7 +8,7 @@ import ReactStars from "react-stars";
 import { Button } from "@mui/material";
 import { Send } from "@mui/icons-material";
 
-const CommentInput = ({ anime_mal_id, user_email, username, anime_title }) => {
+const CommentInput = ({ anime_mal_id, user_email, username, userId, anime_title }) => {
 
     const [comment, setComment] = useState("");
     const [isCreated, setIsCreated] = useState(false);
@@ -61,7 +61,7 @@ const CommentInput = ({ anime_mal_id, user_email, username, anime_title }) => {
             return;
         }
 
-        const data = { anime_mal_id, user_email, comment, username, anime_title, rating, date: new Date() };
+        const data = { anime_mal_id, user_email, comment, username, userId,  anime_title, rating, date: new Date() };
         const response = await fetch("/api/v1/comment", {
             method: "POST",
             body: JSON.stringify(data)
@@ -104,7 +104,7 @@ const CommentInput = ({ anime_mal_id, user_email, username, anime_title }) => {
                 onChange={handleInput}
                 value={comment}
                 placeholder="Write a comment.."
-                className="md:w-[60%] w-full h-40 text-md p-4 rounded-lg focus:outline-none bg-color-black text-color-primary border-4 border-color-darkgray shadow-md hover:border-4 hover:border-color-medium transition duration-700 ease-in-out active:border-color-medium active:border-4 placeholder-color-lavender resize-none"
+                className="md:w-[60%] w-full h-40 text-md p-4 rounded-lg focus:outline-none bg-color-black text-color-primary border-2 border-color-secondary shadow-md hover:border-4 hover:border-color-azure transition duration-700 ease-in-out active:border-color-azure  active:border-4 placeholder-color-lavender resize-none"
             />
             <Button
                 onClick={handlePosting}

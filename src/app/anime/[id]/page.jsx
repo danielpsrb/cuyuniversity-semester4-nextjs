@@ -17,6 +17,18 @@ const Page = async ({ params: { id } }) => {
         where: { user_email: user?.email, anime_mal_id: id }
     })
 
+    const account = await prisma.user.findUnique({
+        where: {
+            email: user?.email
+        }
+    })
+
+    const comments = await prisma.comment.findMany({
+        where: { anime_mal_id: id },
+        select: {id: true},
+    })
+    // console.log(comments)
+
     return (
         <>
             <div className="pt-4 px-4">
@@ -75,11 +87,11 @@ const Page = async ({ params: { id } }) => {
                 </div>
             </div>
             <div className="p-4">
-                <div className="text-color-primary text-2xl mb-4 w-56 border-2 border-color-aqua bg-color-black rounded-md text-nowrap p-1 mx-auto">
+                <div className="text-color-primary text-2xl mb-4 w-56 border-2 border-color-gainsboro bg-color-black rounded-md text-nowrap p-1 mx-auto">
                     <h3 className="select-none text-center">Komentar Penonton</h3>
                 </div>
                 <CommentBox anime_mal_id={id} user_email={user?.email} suppressHydrationWarning />
-                { user && <CommentInput anime_mal_id={id} user_email={user?.email} username={user?.name} anime_title={anime.data.title_english} /> }
+                { user && <CommentInput anime_mal_id={id} user_email={user?.email} username={user?.name} anime_title={anime.data.title_english} userId={account.id} /> }
             </div>
             <div>
                 <VideoPlayer youtubeId={anime.data.trailer.youtube_id}/>

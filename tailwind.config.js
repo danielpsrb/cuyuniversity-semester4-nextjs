@@ -32,7 +32,7 @@ module.exports = {
         greenyellow: '#ADFF2F',
         darkblue: '#00008B',
         darkcyan: '#1E90FF	',
-        light: '#FFFFE0',
+        azure: '#F0FFFF',
         lightgreen: '#90EE90',
         gold: '#FFD700',
         deepskyblue: '#00BFFF',

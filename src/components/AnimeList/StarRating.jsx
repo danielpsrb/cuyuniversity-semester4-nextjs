@@ -47,7 +47,7 @@ const StarRating = ({ onChange }) => {
             <ReactStars
                 count={5}
                 size={30}
-                value={parseFloat(rating)}
+                value={rating}
                 onChange={ratingChanged}
                 color2="#ffd700"
             />
