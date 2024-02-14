@@ -1,40 +1,42 @@
 import prisma from '@/libs/prisma';
 import getComments from '@/app/getComment/page';
-import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request) {
   try {
-    const { anime_mal_id, user_email, comment, username, userId, anime_title, rating, date } = await request.json();
+      const { anime_mal_id, user_email, comment, username, anime_title, userId, rating, date } = await request.json();
 
-    // // Fetch user data to check if the user exists
-    // const existingUser = await prisma.user.findUnique({
-    //   where: { email: user_email },
-    // });
+      // const user = await prisma.user.findFirst({
+      //     where: {
+      //         email: user.email
+      //     }
+      // })
 
-    // if (!existingUser) {
-    //   // If the user doesn't exist, you might want to handle this situation accordingly
-    //   return Response.json({ status: 404, error: "User not found" });
-    // }
+      // if (!user) {
+      //   return Response.json({ status: 404, error: "Account not found" });
+      // }
 
-    // Create the comment and associate it with the existing user
-    const createComment = await prisma.comment.create({
-      data: {
-        anime_mal_id,
-        comment,
-        username,
-        userId,
-        anime_title,
-        rating,
-        date,
-        user: { connect: { email: user_email } },
-      },
-    });
-    if(createComment) return Response.json({ status: 201, isCreated: true });
-    else return Response.json({ status: 500, error: "Internal Server Error" });
-  } catch (error) {
-    console.error("Error creating comment:", error);
+      // const userId = user.id;
+
+      const createComment = await prisma.comment.create({
+          data: {
+              anime_mal_id,
+              user_email,
+              comment,
+              username,
+              anime_title,
+              rating,
+              date,
+              userId // Menggunakan userId yang telah didapatkan
+          },
+      });
+      return Response.json({ status: 201, isCreated: true });
+  } catch(error) {
+      console.error("Error creating comment:", error);
+      return Response.json({ status: 500, error: "Internal Server Error" });
   }
 }
+
+
 
 
 // export async function GET(req) {
