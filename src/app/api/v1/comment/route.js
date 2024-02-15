@@ -5,17 +5,18 @@ export async function POST(request) {
   try {
       const { anime_mal_id, user_email, comment, username, anime_title, userId, rating, date } = await request.json();
 
-      // const user = await prisma.user.findFirst({
-      //     where: {
-      //         email: user.email
-      //     }
-      // })
-
-      // if (!user) {
-      //   return Response.json({ status: 404, error: "Account not found" });
-      // }
-
-      // const userId = user.id;
+      const user = await prisma.user.findUnique({
+        where: {
+          email: user_email
+        },
+        select: {
+          id: true
+        }
+      });
+  
+      if (!user) {
+        return Response.json({ status: 404, error: "User not found" });
+      }
 
       const createComment = await prisma.comment.create({
           data: {
@@ -29,22 +30,12 @@ export async function POST(request) {
               userId // Menggunakan userId yang telah didapatkan
           },
       });
-      return Response.json({ status: 201, isCreated: true });
+      if(createComment) return Response.json({ status: 201, isCreated: true });
+      else return Response.json({ status: 500, error: "Internal Server Error" });
   } catch(error) {
       console.error("Error creating comment:", error);
-      return Response.json({ status: 500, error: "Internal Server Error" });
   }
 }
-
-
-
-
-// export async function GET(req) {
-//   const { searchParams } = new URL(req.url);
-//   console.log(searchParams.get("search"));
-//   return NextResponse.json({ msg: "Hello World" });
-// }
-
 
 export async function GET(request) {
   try {
@@ -61,13 +52,3 @@ export async function GET(request) {
     return Response.json({ status: 500, error: "Internal Server Error" });
   }
 }
-
-// export async function GET(request) {
-//   try {
-//     const comments = await prisma.comment.findMany();
-//     return Response.json({ status: 200, comments });
-//   } catch (error) {
-//     console.error("Error retrieving comments:", error);
-//     return Response.json({ status: 500, error: "Internal Server Error" });
-//   }
-// }
