@@ -25,7 +25,7 @@ const page = async () => {
                             className='bg-color-black text-color-lavender p-4 rounded-lg shadow-xl text-wrap relative'
                         >
                             <div className='absolute top-0 right-0 p-1 cursor-pointer'>
-                                <EditBtn />
+                                <EditBtn comment={comment} />
                                 <DeleteBtn commentId={comment.id} />
                             </div>
                             <Link className="cursor-pointer" href={`/anime/${comment.anime_mal_id}`}>

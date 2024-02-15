@@ -12,7 +12,7 @@ const Modal = ({ isOpen, onClose, children }) => {
                 <div className="modal-content py-4 text-left px-6 bg-color-primary">
                     {/* Modal header */}
                     <div className="flex justify-between items-center mb-4">
-                        <h1 className="text-2xl font-bold">Edit Comments</h1>
+                        <h1 className="text-2xl font-bold text-color-black">Edit Comments</h1>
                         <button onClick={onClose} className="text-color-red">
                             <FaTimes className="h-6 w-6 transition-all duration-700 ease-out" />
                         </button>
@@ -24,4 +24,5 @@ const Modal = ({ isOpen, onClose, children }) => {
         </div>
     );
 };
+
 export default Modal;
