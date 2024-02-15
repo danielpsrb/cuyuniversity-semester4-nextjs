@@ -8,7 +8,7 @@ import ReactStars from "react-stars";
 import { Button } from "@mui/material";
 import { Send } from "@mui/icons-material";
 
-const CommentInput = ({ anime_mal_id, user_email, username, userId, anime_title }) => {
+const CommentInput = ({ anime_mal_id, user_email, username, anime_title }) => {
 
     const [comment, setComment] = useState("");
     const [isCreated, setIsCreated] = useState(false);
@@ -61,7 +61,7 @@ const CommentInput = ({ anime_mal_id, user_email, username, userId, anime_title 
             return;
         }
 
-        const data = { anime_mal_id, user_email, comment, username, userId,  anime_title, rating, date: new Date() };
+        const data = { anime_mal_id, user_email, comment, username, anime_title, rating, date: new Date() };
         const response = await fetch("/api/v1/comment", {
             method: "POST",
             body: JSON.stringify(data)
