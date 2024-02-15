@@ -6,8 +6,6 @@ import { authUserSession } from "@/libs/auth-libs"
 import prisma from "@/libs/prisma"
 import CommentInput from "@/components/AnimeList/CommentInput"
 import CommentBox from "@/components/AnimeList/CommentBox"
-import Header from "@/components/Dashboard/Header"
-
 
 const Page = async ({ params: { id } }) => {
     const anime = await getAnimeResponse(`anime/${id}`)
@@ -15,7 +13,13 @@ const Page = async ({ params: { id } }) => {
     
     const collection = await prisma.collection.findFirst({
         where: { user_email: user?.email, anime_mal_id: id }
-    })
+    });
+
+    const comments = await prisma.comment.findMany({
+        where: { anime_mal_id: id },
+        select: {id: true},
+    });
+    // console.log(comments)
 
     return (
         <>
