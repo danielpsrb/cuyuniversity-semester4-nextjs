@@ -17,13 +17,6 @@ const Page = async ({ params: { id } }) => {
         where: { user_email: user?.email, anime_mal_id: id }
     })
 
-    
-    const account = await prisma.user.findUnique({
-        where: {
-            email: user.email
-        }
-    })
-
     return (
         <>
             <div className="pt-4 px-4">
@@ -86,7 +79,7 @@ const Page = async ({ params: { id } }) => {
                     <h3 className="select-none text-center">Komentar Penonton</h3>
                 </div>
                 <CommentBox anime_mal_id={id} user_email={user?.email} suppressHydrationWarning />
-                { user && <CommentInput anime_mal_id={id} user_email={user?.email} username={user?.name} anime_title={anime.data.title_english} userId={account.id} /> }
+                { user && <CommentInput anime_mal_id={id} user_email={user?.email} username={user?.name} anime_title={anime.data.title_english} /> }
             </div>
             <div>
                 <VideoPlayer youtubeId={anime.data.trailer.youtube_id}/>
