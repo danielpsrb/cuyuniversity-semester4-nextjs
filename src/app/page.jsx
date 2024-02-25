@@ -12,7 +12,7 @@ const Page = async() => {
   const user = await authUserSession();
 
 
-  const topAnime = await getAnimeResponse("top/anime", "limit=8")
+  const topAnime = await getAnimeResponse("top/anime", "limit=10")
   let recommendedAnime = await getNestedAnimeResponse("recommendations/anime", "entry")
   recommendedAnime = reproduce(recommendedAnime, 4)
   
