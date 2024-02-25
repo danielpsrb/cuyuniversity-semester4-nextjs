@@ -1,12 +1,17 @@
 import Navbar from '@/components/Navbar'
 import '@/app/globals.css'
-import { Gabarito } from 'next/font/google'
+import { Poppins } from 'next/font/google';
 
-const gabarito = Gabarito({ subsets: ['latin'] })
+const poppins = Poppins({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-poppins',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
+});
 
 export const metadata = {
-  title: 'D-Animelist',
-  description: 'Web Anime Indonesia with NEXT JS 14',
+  title: 'D-ANIME',
+  description: 'Web Anime with NEXT JS 14',
   icons:{
     icon:['/favicon.ico?v=4'],
     apple:['/apple-touch-icon.png?v=4'],
@@ -17,7 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${gabarito.className} bg-color-night`} suppressHydrationWarning={true}>
+      <body className={`${poppins.className} bg-color-night`} suppressHydrationWarning={true}>
         <Navbar />
         {children}
       </body>
