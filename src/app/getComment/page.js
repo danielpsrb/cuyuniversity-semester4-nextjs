@@ -1,5 +1,5 @@
 "use server"
-import prisma from '@/libs/prisma';
+import prisma from "@/services/prisma";
 
 const getComments = async (anime_mal_id) => {
   try {

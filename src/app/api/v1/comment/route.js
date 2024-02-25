@@ -1,4 +1,4 @@
-import prisma from '@/libs/prisma';
+import prisma from '@/services/prisma';
 import getComments from '@/app/getComment/page';
 
 export async function POST(request) {

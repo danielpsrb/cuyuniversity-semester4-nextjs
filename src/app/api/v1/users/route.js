@@ -1,5 +1,4 @@
-// route.js
-import prisma from "@/libs/prisma";
+import prisma from "@/services/prisma";
 
 export async function GET(request) {
     try {

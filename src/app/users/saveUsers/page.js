@@ -1,4 +1,4 @@
-import prisma from "@/libs/prisma";
+import prisma from "@/services/prisma";
 
 export const saveUserData = async (userData) => {
     try {

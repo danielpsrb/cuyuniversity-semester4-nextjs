@@ -1,4 +1,4 @@
-import prisma from "@/libs/prisma"
+import prisma from "@/services/prisma";
 
 export async function POST(request) {
     const { anime_mal_id, user_email, anime_image, anime_title } = await request.json()

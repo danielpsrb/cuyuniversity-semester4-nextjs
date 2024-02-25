@@ -3,7 +3,7 @@ import VideoPlayer from "@/components/Utilities/VideoPlayer"
 import Image from "next/image"
 import CollectionButton from "@/components/AnimeList/CollectionButton"
 import { authUserSession } from "@/services/auth-services";
-import prisma from "@/libs/prisma"
+import prisma from "@/services/prisma";
 import CommentInput from "@/components/AnimeList/CommentInput"
 import CommentBox from "@/components/AnimeList/CommentBox"
 

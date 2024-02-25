@@ -1,5 +1,5 @@
 import { authUserSession } from "@/services/auth-services";
-import prisma from '@/libs/prisma'
+import prisma from "@/services/prisma";
 import React from 'react'
 import Link from "next/link"
 import { formatDistanceToNow } from 'date-fns';
