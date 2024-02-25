@@ -1,4 +1,4 @@
-import { authUserSession } from "@/libs/auth-libs"
+import { authUserSession } from "@/services/auth-services";
 import Image from "next/image"
 import Link from "next/link"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
