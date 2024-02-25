@@ -30,7 +30,7 @@ const Page = async () => {
             <Image src={user?.image} alt="images" width={250} height={250} className="rounded-full w-76 h-76 shadow-xl select-none" />
             <div className="flex flex-wrap gap-4 py-8">
                 <div className="relative">
-                    <Link href="/users/dashboard/collection" className="bg-color-lightblue text-color-primary font-bold px-4 py-3 text-xl rounded-md hover:bg-color-lime transform hover:scale-105 transition duration-600 ease-in-out select-none	">
+                    <Link href="/users/dashboard/collection" className="bg-color-lightblue text-color-primary font-bold px-4 py-3 text-md rounded-md hover:bg-color-lime transform hover:scale-105 transition duration-600 ease-in-out select-none	">
                         <span className="mr-6">My Collection</span>
                         <span className="absolute end-1">
                             <CollectionsIcon/>
@@ -38,7 +38,7 @@ const Page = async () => {
                     </Link>
                 </div>
                 <div className="relative">
-                    <Link href="/users/dashboard/comment" className="bg-color-lightblue text-color-primary font-bold px-4 py-3 text-xl rounded-md hover:bg-color-lime transform hover:scale-105 transition duration-600 ease-in-out select-none">
+                    <Link href="/users/dashboard/comment" className="bg-color-lightblue text-color-primary font-bold px-4 py-3 text-md rounded-md hover:bg-color-lime transform hover:scale-105 transition duration-600 ease-in-out select-none">
                         <span className="mr-6">My Comment</span>
                         <span className="absolute end-1">
                             <FontAwesomeIcon icon={faComment} className="w-6 h-6"/>
