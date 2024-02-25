@@ -4,6 +4,8 @@ import { getAnimeResponse, getNestedAnimeResponse, reproduce } from "@/libs/api-
 import Footer from "@/components/Footer/Footer";
 import { authUserSession } from "@/libs/auth-libs";
 import LoginSuccessMessage from "@/components/Dashboard/LoginSucessMessage";
+import ReccomendedAnimeList from '@/components/anime-recommendation'
+
 
 const Page = async() => {
   // const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/top/anime?limit=8`)
@@ -20,12 +22,12 @@ const Page = async() => {
     <>
       {user && <LoginSuccessMessage />}
       <section>
-        <Header title="Paling Populer" linkTitle="Lihat Semua" linkHref="/populer"/>
+        <Header title="Top Anime" linkTitle="Lihat Semua" linkHref="/populer"/>
         <AnimeList api={topAnime}/>
       </section>
       <section>
-        <Header title="Rekomendasi"/>
-        <AnimeList api={recommendedAnime}/>
+        <Header title="Anime Recommendation" />
+        <ReccomendedAnimeList api={recommendedAnime} />
       </section>
       <Footer/>
     </>
