@@ -80,7 +80,7 @@ const Page = async ({ params: { id } }) => {
                 </div>
             </div>
             <div className="p-4">
-                <div className="text-color-primary text-2xl mb-4 w-60 border-2 border-color-gainsboro bg-color-black rounded-md text-nowrap p-1 mx-auto">
+                <div className="text-color-primary text-xl mb-4 w-60 border-2 border-color-gainsboro bg-color-black rounded-md text-nowrap p-1 mx-auto">
                     <h3 className="select-none text-center">Komentar Penonton</h3>
                 </div>
                 <CommentBox anime_mal_id={id} user_email={user?.email} suppressHydrationWarning />
