@@ -64,9 +64,10 @@ const Page = async ({ params: { id } }) => {
                     <Image
                         src={anime.data.images.webp.image_url}
                         alt={anime.data.images.jpg.image_url}
-                        width={250}
-                        height={250}
-                        className="w-full rounded object-cover max-h-96"
+                        width={500}
+                        height={350}
+                        className="w-full rounded-sm object-cover max-h-96"
+                        priority={true}
                     />
                     <iframe src={anime.data.trailer.embed_url} width="100%" height={384} allowFullScreen  ></iframe>
                 </div>
