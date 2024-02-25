@@ -60,7 +60,7 @@ const VideoPlayer = ({ youtubeId }) => {
         return (
             <button
                 onClick={handleVideoPlayer}
-                className="rounded fixed bottom-5 right-5 w-32 bg-color-primary text-color-dark text-xl hover:bg-color-aqua transition-all shadow-xl glow"
+                className="rounded fixed bottom-5 right-5 w-32 bg-color-primary text-color-dark text-md hover:bg-color-aqua transition-all shadow-xl glow"
             >
                 Watch Trailer
             </button>
