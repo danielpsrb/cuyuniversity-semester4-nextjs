@@ -1,4 +1,4 @@
-import { authUserSession } from '@/libs/auth-libs'
+import { authUserSession } from "@/services/auth-services";
 import prisma from '@/libs/prisma'
 import React from 'react'
 import Link from "next/link"

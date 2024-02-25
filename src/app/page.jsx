@@ -1,8 +1,8 @@
 import AnimeList from "@/components/AnimeList"
 import Header from "@/components/AnimeList/Header";
-import { getAnimeResponse, getNestedAnimeResponse, reproduce } from "@/libs/api-libs";
+import { getAnimeResponse, getNestedAnimeResponse, reproduce } from "@/services/api-services";
 import Footer from "@/components/Footer/Footer";
-import { authUserSession } from "@/libs/auth-libs";
+import { authUserSession } from "@/services/auth-services";
 import LoginSuccessMessage from "@/components/Dashboard/LoginSucessMessage";
 import ReccomendedAnimeList from '@/components/anime-recommendation'
 

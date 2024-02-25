@@ -1,7 +1,7 @@
 "use client"
 import React, {useState, useEffect} from 'react'
 import LoginSuccessMessage from './LoginSucessMessage'
-import { authUserSession } from '@/libs/auth-libs'
+import { authUserSession } from "@/services/auth-services";
 
 const NotifLogin = async () => {
 

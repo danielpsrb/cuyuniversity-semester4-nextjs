@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { authUserSession } from "@/libs/auth-libs";
+import { authUserSession } from "@/services/auth-services";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRightToBracket, faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import { faHome } from '@fortawesome/free-solid-svg-icons';

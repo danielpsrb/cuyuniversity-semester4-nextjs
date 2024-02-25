@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
-import { authUserSession } from "@/libs/auth-libs";
+import { authUserSession } from "@/services/auth-services";
 
 const Welcome = () => {
     const [user, setUser] = useState(null);
