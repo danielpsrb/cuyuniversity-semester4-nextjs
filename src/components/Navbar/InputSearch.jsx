@@ -1,37 +1,37 @@
 "use client"
 
-import { MagnifyingGlass } from "@phosphor-icons/react/dist/ssr"
-import { useRouter } from "next/navigation"
-import { useRef } from "react"
-import { Search } from "@mui/icons-material"
+import React, { useRef } from 'react'
+import { useRouter } from 'next/navigation'
+import { MagnifyingGlass } from '@phosphor-icons/react'
 
 const InputSearch = () => {
-    const SearchRef = useRef()
+
+    const searchRef = useRef()
     const router = useRouter()
 
-    const handleSearch = (event) => {
+    const handleSearchBtn = (event) => {
         if (event.key === "Enter" || event.type === "click") {
             event.preventDefault();
-            const keyword = SearchRef.current.value;
+            const keywords = searchRef.current.value;
     
-            // Check if the keyword is not empty before initiating the search
-            if (keyword.trim() !== "") {
-                router.push(`/search/${keyword}`);
+            if (keywords.trim() !== "") {
+                router.push(`/search/${keywords}`);
             }
         }
-    };    
+    }
 
     return (
-        <div className="relative">
+        <div className='relative'>
             <input 
-                placeholder="Search for..." 
-                className="w-full p-2 pr-10 rounded-lg bg-color-gainsboro focus:outline-none focus:border-color-lightblue focus:ring focus:ring-color-lightblue " 
-                ref={SearchRef}
-                onKeyDown={handleSearch}
+                type="text" 
+                placeholder="Search" 
+                className="input input-bordered w-80 md:w-auto p-2 pr-10" 
+                ref={searchRef}
+                onKeyDown={handleSearchBtn}
                 required
             />
-            <button className="absolute top-2 end-2" onClick={handleSearch}>
-                <Search sx={{color: "blue"}} />
+            <button className='absolute top-3 end-2' onClick={handleSearchBtn}>
+                <MagnifyingGlass size={24} />
             </button>
         </div>
     )
