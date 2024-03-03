@@ -10,7 +10,7 @@ const Navbar = async() => {
     // console.log(user)
 
     return (
-        <div className="navbar bg-[#F0FFFF] flex flex-col lg:flex-row gap-2">
+        <div className="navbar bg-color-primary flex flex-col lg:flex-row gap-2">
             <div className="flex-1">
                 <Link href="/" className="btn btn-ghost text-2xl text-color-black">D-ANIMELIST</Link>
             </div>
