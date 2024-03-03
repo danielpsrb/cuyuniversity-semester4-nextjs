@@ -5,7 +5,7 @@ const HeaderMenu = ({ title }) => {
         <div>
             <div className="sm:py-8 sm:px-4 py-4 px-2">
                 <div className="overflow-hidden bg-[url(https://akamai-origin.myanimelist.net/images/anime/1770/97704l.webp)] object-cover p-8">
-                    <h3 className="text-center text-xl font-bold text-[#eee]">{title}</h3>
+                    <h3 className="text-center text-xl font-bold text-color-primary">{title}</h3>
                 </div>
             </div>
         </div>
