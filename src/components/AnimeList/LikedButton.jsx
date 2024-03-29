@@ -38,7 +38,7 @@ const LikedButton = ({ commentId }) => {
         <button onClick={handleLiked}>
           {liked ? <AiFillHeart className='text-color-red' size={20} /> : <AiOutlineHeart className='text-color-primary' size={20} />}
         </button>
-        <span>{likesCount}</span>
+        <span className='text-color-primary'>{likesCount}</span>
       </div>
     </>
   )
