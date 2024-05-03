@@ -1,5 +1,4 @@
-CuyUniversity NEXT JS 14
-## Web Animelist dengan NEXT JS 14, NEXT AUTH v5, DaisyUI, dan TAILWIND CSS
+## WEB ANIMELIST dengan NEXT JS 14, NEXT AUTH v5, PRISMA, POSTGRESQL, DaisyUI, dan TAILWIND CSS
 
 First, run the development server:
 
