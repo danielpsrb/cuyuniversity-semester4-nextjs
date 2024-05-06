@@ -3,12 +3,11 @@ import Link from 'next/link';
 import InputSearch from './InputSearch';
 import Image from 'next/image';
 import { authUserSession } from '@/services/auth-services';
+import Theme from './Theme';
 
 const Navbar = async() => {
 
-    const user = await authUserSession()
-    // console.log(user)
-
+    const user = await authUserSession();
     return (
         <div className="navbar bg-color-primary flex flex-col lg:flex-row gap-2">
             <div className="flex-1">
@@ -42,7 +41,9 @@ const Navbar = async() => {
                             }
                         </ul>
                 </div>
+                <Theme />
             </div>
+            
         </div>
     );
 };
