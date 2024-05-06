@@ -79,3 +79,10 @@ img:hover {
     }
     
     @keyframes d1 {to{clip-path: inset(0 -34% 0 0)}}
+
+
+.cards {
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
