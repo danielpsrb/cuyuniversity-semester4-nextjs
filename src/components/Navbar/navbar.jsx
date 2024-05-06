@@ -41,6 +41,8 @@ const Navbar = async() => {
                             }
                         </ul>
                 </div>
+            </div>
+            <div className='flex lg:flex-row flex-col items-center'>
                 <Theme />
             </div>
             
