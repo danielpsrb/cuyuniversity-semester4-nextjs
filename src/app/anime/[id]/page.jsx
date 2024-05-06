@@ -24,12 +24,12 @@ const Page = async ({ params: { id } }) => {
     return (
         <>
             <div className="pt-4 px-4">
-                <h3 className="lg:text-2xl text-xl text-color-primary text-center">{anime.data.title_english} - {anime.data.year}</h3>
+                <h3 className="lg:text-2xl text-xl text-color-black dark:text-color-primary text-center">{anime.data.title_english} - {anime.data.year}</h3>
                 {
                     !collection && user && <CollectionButton anime_mal_id={id} user_email={user?.email} anime_image={anime.data.images.webp.image_url} anime_title={anime.data.title}/>
                 }
             </div>
-            <div className="pt-4 px-4 flex  gap-2 lg:justify-center text-color-greenyellow overflow-x-auto gap-x-4 whitespace-nowrap">
+            <div className="pt-4 px-4 flex  gap-2 lg:justify-center text-color-black dark:text-color-greenyellow overflow-x-auto gap-x-4 whitespace-nowrap">
                 <div className="w-36 flex-shrink-0 flex flex-col justify-center items-center rounded-md border-2 border-color-greenyellow p-2 m-2">
                     <h3>PERINGKAT</h3>
                     <p>{anime.data.rank}</p>
