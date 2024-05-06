@@ -21,8 +21,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="dark">
-      <body className={poppins.className} suppressHydrationWarning={true}>
+    <html lang="en">
+      <body className={`${poppins.className} bg-color-azure dark:bg-color-dark`} suppressHydrationWarning={true}>
         <Navbar />
         {children}
       </body>
