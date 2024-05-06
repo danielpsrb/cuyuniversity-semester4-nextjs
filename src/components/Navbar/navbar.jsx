@@ -9,9 +9,9 @@ const Navbar = async() => {
 
     const user = await authUserSession();
     return (
-        <div className="navbar bg-color-primary flex flex-col lg:flex-row gap-2">
+        <div className="navbar bg-color-lightblue dark:bg-color-greenyellow flex flex-col lg:flex-row gap-2">
             <div className="flex-1">
-                <Link href="/" className="btn btn-ghost text-2xl text-color-black">D-ANIMELIST</Link>
+                <Link href="/" className="btn btn-ghost text-2xl text-color-primary dark:text-color-black">D-ANIMELIST</Link>
             </div>
             <div className="flex-none gap-2">
                 <div className="form-control">

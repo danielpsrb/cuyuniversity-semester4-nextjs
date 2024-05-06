@@ -55,7 +55,7 @@ const Theme = () => {
             {options?.map(opt=>(
                 <button 
                     key={opt.text} 
-                    className={`w-8 h-8 leading-9 text-xl rounded-md m-1 ${theme === opt.text && 'text-color-blue'}`}
+                    className={`w-8 h-8 leading-9 text-2xl rounded-md m-1 ${theme === opt.text && 'text-color-blue'}`}
                     onClick={() => setTheme(opt.text)}
                 >
                     <FontAwesomeIcon icon={opt.icon} className='w-6 h-6' />

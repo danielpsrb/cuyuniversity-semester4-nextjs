@@ -7,7 +7,7 @@ const ReccomendedAnimeList = ({ api }) => {
         <div className='grid md:grid-cols-6 sm:grid-cols-2 grid-cols-3 gap-4 px-4'>
             {api.data?.map((anime, index) => {
                 return (
-                    <Link href={`/anime/${anime.mal_id}`} className='cursor-pointer text-color-primary hover:text-yellow-500 transition-all' key={index}>
+                    <Link key={index} href={`/anime/${anime.mal_id}`} className='cursor-pointer text-color-black hover:text-color-accent dark:text-color-primary dark:hover:text-color-darkcyan transition-all cards'>
                         <Image 
                             src={anime.images.webp.image_url} 
                             alt='animeImages' 

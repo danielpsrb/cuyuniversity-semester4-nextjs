@@ -24,8 +24,8 @@ const InputSearch = () => {
         <div className='relative'>
             <input 
                 type="text" 
-                placeholder="Search" 
-                className="input input-bordered w-80 md:w-auto p-2 pr-10" 
+                placeholder="search anime.." 
+                className="input input-bordered bg-color-primary dark:text-color-gainsboro text-color-black dark:bg-color-dark w-80 md:w-auto p-2 pr-10" 
                 ref={searchRef}
                 onKeyDown={handleSearchBtn}
                 required
