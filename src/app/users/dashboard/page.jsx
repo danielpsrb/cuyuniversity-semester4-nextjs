@@ -6,7 +6,6 @@ import { faComment } from "@fortawesome/free-solid-svg-icons";
 import CollectionsIcon from '@mui/icons-material/Collections';
 import Header from "@/components/Dashboard/Header";
 import { saveUserData } from "../saveUsers/page";
-import Welcome from "@/components/Dashboard/Welcome";
 
 const Page = async () => {
     const user = await authUserSession()
