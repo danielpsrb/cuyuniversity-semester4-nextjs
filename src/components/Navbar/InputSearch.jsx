@@ -3,6 +3,8 @@
 import React, { useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { MagnifyingGlass } from '@phosphor-icons/react'
+import { FaSearch } from "react-icons/fa";
+
 
 const InputSearch = () => {
 
@@ -31,7 +33,7 @@ const InputSearch = () => {
                 required
             />
             <button className='absolute top-3 end-2' onClick={handleSearchBtn}>
-                <MagnifyingGlass size={24} />
+                <FaSearch size={24} />
             </button>
         </div>
     )
