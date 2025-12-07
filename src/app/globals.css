@@ -1,6 +1,42 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* ===========================================
+   Migrasi Tailwind v3 → Tailwind v4
+   Semua custom color & theme ke @theme
+=========================================== */
+@theme {
+  --color-primary: #eeeeee;
+  --color-accent: #ffc639;
+  --color-secondary: #393e46;
+  --color-dark: #1d232A;
+  --color-night: #0F172A;
+  --color-aqua: #00FFFF;
+  --color-aquamarine: #7FFFD4;
+  --color-blue: #4682B4;
+  --color-red: #FF0000;
+  --color-tomato: #FF6347;
+  --color-purple: #663399;
+  --color-orange: #FFA500;
+  --color-orangered: #FF4500;
+  --color-black: #111;
+  --color-medium: #0000CD;
+  --color-lightblue: #42656b;
+  --color-lavender: #E6E6FA;
+  --color-lime: #00FF00;
+  --color-darkgray: #A9A9A9;
+  --color-gainsboro: #DCDCDC;
+  --color-greenyellow: #ADFF2F;
+  --color-darkblue: #00008B;
+  --color-darkcyan: #1E90FF;
+  --color-azure: #F0FFFF;
+  --color-lightgreen: #90EE90;
+  --color-gold: #FFD700;
+  --color-deepskyblue: #00BFFF;
+}
+
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark, cupcake;
+}
 
 *, *::before, *::after {
     padding: 0;
@@ -86,3 +122,4 @@ img:hover {
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
+
