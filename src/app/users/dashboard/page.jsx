@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment } from "@fortawesome/free-solid-svg-icons"; 
 import CollectionsIcon from '@mui/icons-material/Collections';
 import Header from "@/components/Dashboard/Header";
-import { saveUserData } from "../saveUsers/page";
+import { saveUserData } from "@/services/user-services";
 
 const Page = async () => {
     const user = await authUserSession()
