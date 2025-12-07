@@ -47,6 +47,7 @@ const CommentBox = ({ anime_mal_id }) => {
                         <div className='flex flex-row justify-between items-center mb-3'>
                             <div className='flex flex-row items-center'>
                                 <Image
+                                    alt='UserAvatar'
                                     src={comment.user.image || '/user.png'}
                                     width={45}
                                     height={45}
