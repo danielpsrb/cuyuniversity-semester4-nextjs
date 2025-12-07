@@ -9,6 +9,7 @@
     "lint": "next lint",
     "postinstall": "prisma generate"
   },
+  "packageManager": "pnpm@10.22.0",
   "dependencies": {
     "@auth/prisma-adapter": "^2.11.1",
     "@emotion/react": "^11.14.0",
